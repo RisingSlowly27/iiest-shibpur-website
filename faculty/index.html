@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Directory - IIEST Shibpur</title>
+    <!-- Fonts & Icons -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+<div id="page" class="site">
+    <!-- Top info bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <span><i class="fa fa-envelope"></i> research@iiests.ac.in</span>
+                <span style="margin-left: 20px;"><i class="fa fa-phone"></i> +91 (033) 2668 4561</span>
+            </div>
+            <div class="top-bar-links">
+                <a href="/">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="/">
+                    <img src="/images/iiest-logo.jpg" alt="IIEST Shibpur Logo">
+                </a>
+            </div>
+            <div class="logo-text">
+                <h1>IIEST Shibpur</h1>
+                <p>Indian Institute of Engineering Science and Technology, Shibpur</p>
+            </div>
+            <nav class="nav-section">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item active"><a href="/faculty/">Faculty</a></li>
+                    <li class="nav-item"><a href="/research/">Research</a></li>
+                    <li class="nav-item"><a href="/login/" class="btn btn-accent"><i class="fa fa-sign-in-alt"></i> Login Portal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero & Search Section -->
+        <section class="relative py-20 bg-slate-100 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Our Distinguished Faculty</h1>
+                    <p class="text-lg text-slate-700 mb-12">Driven by a legacy of academic excellence since 1856, our faculty members are leaders in research, innovation, and pedagogy across engineering and applied sciences.</p>
+                    <div class="flex flex-col md:flex-row gap-4 items-stretch">
+                        <div class="relative flex-grow">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+                            <input id="faculty-search"
+                                class="w-full pl-12 pr-4 py-4 rounded-lg border border-slate-200 focus:border-indigo-900 focus:ring-1 focus:ring-indigo-900 bg-white outline-none"
+                                placeholder="Search by name, research area, or department..." type="text" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute right-0 top-0 w-1/3 h-full bg-slate-200 opacity-30 -skew-x-12 translate-x-1/2"></div>
+        </section>
+
+        <!-- Department Quick Filters -->
+        <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm">
+            <div class="max-w-7xl mx-auto px-6 overflow-x-auto">
+                <div class="flex items-center gap-6 whitespace-nowrap min-w-max">
+                    <button class="text-indigo-900 font-bold border-b-2 border-indigo-900 dept-filter-btn" data-dept="all">All Departments</button>
+                    <button class="text-slate-700 hover:text-indigo-900 transition-colors dept-filter-btn" data-dept="Computer Science and Technology">Computer Science &amp; Tech</button>
+                    <button class="text-slate-700 hover:text-indigo-900 transition-colors dept-filter-btn" data-dept="Information Technology">Information Technology</button>
+                    <button class="text-slate-700 hover:text-indigo-900 transition-colors dept-filter-btn" data-dept="Electrical Engineering">Electrical Engineering</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Faculty Directory Grid -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="faculty-grid">
+                    
+                    <!-- 1. Apurba Sarkar -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Computer Science and Technology" data-name="apurba sarkar" data-research="digital geometry, discrete geometry, image processing, shape analysis, object oriented programming">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(260, 60%, 40%);">AS</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Associate Professor</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Apurba Sarkar</h3>
+                            <p class="text-sm text-slate-600 mb-4">Computer Science and Technology</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Digital Geometry</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Discrete Geometry</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Image Processing</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Computer+Science+and+Technology" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Manas Hira -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Computer Science and Technology" data-name="manas hira" data-research="computer networks, operating systems, data structures, distributed systems">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(275, 65%, 45%);">MH</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Associate Professor</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Manas Hira</h3>
+                            <p class="text-sm text-slate-600 mb-4">Computer Science and Technology</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Computer Networks</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Operating Systems</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Data Structures</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Computer+Science+and+Technology" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Ashish Kumar Layek -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Computer Science and Technology" data-name="ashish kumar layek" data-research="algorithms, graph theory, machine learning, parallel computing">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(250, 70%, 42%);">AL</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Assistant Professor</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Ashish Kumar Layek</h3>
+                            <p class="text-sm text-slate-600 mb-4">Computer Science and Technology</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Algorithms</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Graph Theory</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Machine Learning</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Computer+Science+and+Technology" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Indrajit Banerjee -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Information Technology" data-name="indrajit banerjee" data-research="cellular automata, wireless sensor networks, iot, cyber security, medical image analysis">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(200, 70%, 40%);">IB</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Professor &amp; HOD</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Indrajit Banerjee</h3>
+                            <p class="text-sm text-slate-600 mb-4">Information Technology</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Cellular Automata</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Wireless Networks</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">IoT</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Information+Technology" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Arindam Biswas -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Information Technology" data-name="arindam biswas" data-research="semiconductor devices, nanoelectronics, vlsi design, high-speed communication">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(190, 75%, 38%);">AB</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Professor</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Arindam Biswas</h3>
+                            <p class="text-sm text-slate-600 mb-4">Information Technology</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Semiconductors</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Nanoelectronics</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">VLSI Design</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Information+Technology" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Prasun Ghosal -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Information Technology" data-name="prasun ghosal" data-research="design automation, low-power vlsi, embedded systems, quantum computing">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(210, 65%, 42%);">PG</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Associate Professor</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Prasun Ghosal</h3>
+                            <p class="text-sm text-slate-600 mb-4">Information Technology</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Design Automation</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Embedded Systems</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Quantum Computing</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Information+Technology" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Konika Das (Bhattacharya) -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Electrical Engineering" data-name="konika das (bhattacharya)" data-research="vlsi technology, high voltage systems, smart grids, electromagnetics">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(220, 65%, 35%);">KD</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Professor &amp; HOD</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Konika Das (Bhattacharya)</h3>
+                            <p class="text-sm text-slate-600 mb-4">Electrical Engineering</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">VLSI Technology</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">High Voltage</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Smart Grids</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Electrical+Engineering" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Abhinandan De -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Electrical Engineering" data-name="abhinandan de" data-research="power systems, power quality, renewable energy integration, microgrids">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(230, 70%, 38%);">AD</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Professor</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Abhinandan De</h3>
+                            <p class="text-sm text-slate-600 mb-4">Electrical Engineering</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Power Systems</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Renewables</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Microgrids</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Electrical+Engineering" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Amal Barman -->
+                    <div class="faculty-card bg-white border border-slate-200 rounded-lg flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
+                         data-dept="Electrical Engineering" data-name="amal barman" data-research="high voltage insulation, electric vehicle drives, power electronics, smart sensors">
+                        <div class="aspect-[3/4] relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center text-white font-bold text-6xl select-none" style="background: hsl(215, 60%, 40%);">AB</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="text-xs text-indigo-900 font-bold mb-1">Associate Professor</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">Amal Barman</h3>
+                            <p class="text-sm text-slate-600 mb-4">Electrical Engineering</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">HV Insulation</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">EV Drives</span>
+                                <span class="bg-slate-100 text-slate-700 px-2 py-1 text-xs rounded border border-slate-200">Power Electronics</span>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="/research/?dept=Electrical+Engineering" class="w-full border border-indigo-900 text-indigo-900 py-3 rounded-lg text-sm font-bold hover:bg-indigo-900 hover:text-white transition-all text-center block">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-widget">
+                <h3>About IIEST Shibpur</h3>
+                <p style="margin-bottom: 15px; font-size: 0.9rem; line-height: 1.7;">
+                    Established in 1856, the Indian Institute of Engineering Science and Technology, Shibpur is one of India's oldest and most prestigious engineering institutions.
+                </p>
+                <p style="font-size: 0.85rem;"><i class="fa fa-map-marker-alt"></i> Botanical Garden Area, Howrah, West Bengal 711103</p>
+            </div>
+            
+            <div class="footer-widget">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="/">Home Page</a></li>
+                    <li><a href="/faculty/">Faculty Directory</a></li>
+                    <li><a href="/research/">Research Explorer</a></li>
+                    <li><a href="/login/">Faculty Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h3>External Resources</h3>
+                <ul>
+                    <li><a href="https://www.education.gov.in/" target="_blank">Ministry of Education</a></li>
+                    <li><a href="https://www.ugc.gov.in/" target="_blank">UGC India</a></li>
+                    <li><a href="https://www.aicte-india.org/" target="_blank">AICTE</a></li>
+                    <li><a href="https://www.inflibnet.ac.in/" target="_blank">INFLIBNET</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 IIEST Shibpur. Designed &amp; Developed for Academic &amp; College Projects. All Rights Reserved.</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('faculty-search');
+    const filterBtns = document.querySelectorAll('.dept-filter-btn');
+    const cards = document.querySelectorAll('.faculty-card');
+    
+    let activeDept = 'all';
+    let searchQuery = '';
+    
+    function filterCards() {
+        cards.forEach(card => {
+            const dept = card.getAttribute('data-dept');
+            const name = card.getAttribute('data-name');
+            const research = card.getAttribute('data-research');
+            
+            const matchesDept = (activeDept === 'all' || dept === activeDept);
+            const matchesSearch = (searchQuery === '' || 
+                                   name.includes(searchQuery) || 
+                                   research.includes(searchQuery) || 
+                                   dept.toLowerCase().includes(searchQuery));
+            
+            if (matchesDept && matchesSearch) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            searchQuery = this.value.toLowerCase().trim();
+            filterCards();
+        });
+    }
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => {
+                b.classList.remove('text-indigo-900', 'font-bold', 'border-b-2', 'border-indigo-900');
+                b.classList.add('text-slate-700');
+            });
+            this.classList.add('text-indigo-900', 'font-bold', 'border-b-2', 'border-indigo-900');
+            this.classList.remove('text-slate-700');
+            
+            activeDept = this.getAttribute('data-dept');
+            filterCards();
+        });
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIEST Shibpur - Indian Institute of Engineering Science and Technology</title>
+    <!-- Fonts & Icons -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+<div id="page" class="site">
+    <!-- Top info bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <span><i class="fa fa-envelope"></i> research@iiests.ac.in</span>
+                <span style="margin-left: 20px;"><i class="fa fa-phone"></i> +91 (033) 2668 4561</span>
+            </div>
+            <div class="top-bar-links">
+                <a href="/">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="/">
+                    <img src="/images/iiest-logo.jpg" alt="IIEST Shibpur Logo">
+                </a>
+            </div>
+            <div class="logo-text">
+                <h1>IIEST Shibpur</h1>
+                <p>Indian Institute of Engineering Science and Technology, Shibpur</p>
+            </div>
+            <nav class="nav-section">
+                <ul class="nav-menu">
+                    <li class="nav-item active"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/faculty/">Faculty</a></li>
+                    <li class="nav-item"><a href="/research/">Research</a></li>
+                    <li class="nav-item"><a href="/login/" class="btn btn-accent"><i class="fa fa-sign-in-alt"></i> Login Portal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[85vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full hero-gradient absolute inset-0 z-10" style="background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));"></div>
+                <div class="w-full h-full bg-cover bg-center" style="background-image: url('/images/frontpage.jpeg');"></div>
+            </div>
+            <div class="relative z-20 max-w-7xl mx-auto px-6 w-full">
+                <div class="max-w-3xl">
+                    <h1 class="text-white text-5xl md:text-6xl mb-6 leading-tight font-bold">Excellence in Engineering and Science since 1856</h1>
+                    <p class="text-white/90 text-lg md:text-xl mb-10 max-w-2xl">
+                        As one of India's oldest and premier engineering institutions, IIEST Shibpur fosters innovation, intellectual curiosity, and technical leadership in a historic setting.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="/faculty/" class="bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded hover:bg-amber-300 transition-all text-center">
+                            Explore Our Faculty
+                        </a>
+                        <a href="/research/" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold px-8 py-4 rounded hover:bg-white/20 transition-all text-center">
+                            Research Portal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-amber-600 font-bold uppercase tracking-widest mb-4 block text-sm">Our Legacy</span>
+                        <h2 class="text-slate-900 text-3xl md:text-4xl mb-8 font-bold">Pioneering Technical Education for over 160 Years</h2>
+                        <p class="text-slate-700 text-lg mb-6">
+                            IIEST Shibpur has stood at the forefront of technical education since the mid-19th century. From its humble beginnings to its current status as an Institute of National Importance, our mission remains unchanged: to empower the next generation of global engineers and researchers.
+                        </p>
+                        <p class="text-slate-600 text-base mb-8">
+                            Our sprawling campus on the banks of the Hooghly River is a vibrant ecosystem where history meets cutting-edge innovation. We provide a rigorous academic environment coupled with a rich extracurricular life, ensuring holistic development for every student.
+                        </p>
+                        <a class="text-indigo-900 font-bold flex items-center gap-2 hover:gap-4 transition-all duration-300" href="/faculty/">
+                            Meet Our Researchers
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <div class="aspect-square bg-slate-100 rounded overflow-hidden shadow-xl border border-slate-200">
+                            <div class="w-full h-full bg-cover bg-center" style="background-image: url('/images/frontpage.jpeg');"></div>
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-indigo-900 text-white p-8 rounded shadow-2xl hidden lg:block">
+                            <p class="text-4xl font-bold">1856</p>
+                            <p class="text-xs uppercase tracking-widest opacity-80 mt-1">Year Established</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Statistics -->
+        <section class="py-20 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                    <div class="space-y-2">
+                        <p class="text-4xl md:text-5xl text-amber-400 font-bold">160+</p>
+                        <p class="text-sm uppercase tracking-wider opacity-80">Years of Excellence</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-4xl md:text-5xl text-amber-400 font-bold">3</p>
+                        <p class="text-sm uppercase tracking-wider opacity-80">Featured Departments</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-4xl md:text-5xl text-amber-400 font-bold">9</p>
+                        <p class="text-sm uppercase tracking-wider opacity-80">Core Faculty Members</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-4xl md:text-5xl text-amber-400 font-bold">100%</p>
+                        <p class="text-sm uppercase tracking-wider opacity-80">Research Driven</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Events -->
+        <section class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <span class="text-amber-600 font-bold uppercase tracking-widest mb-2 block text-sm">Updates</span>
+                        <h2 class="text-slate-900 text-3xl font-bold">News &amp; Campus Events</h2>
+                    </div>
+                    <a href="/research/" class="hidden md:flex items-center gap-2 text-slate-600 hover:text-indigo-900 transition-all font-bold">
+                        View Research Publications <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- News Item 1 -->
+                    <article class="bg-white rounded overflow-hidden border border-slate-200 hover:shadow-xl transition-all group">
+                        <div class="h-56 overflow-hidden relative">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/frontpage.jpeg');"></div>
+                            <span class="absolute top-4 left-4 bg-indigo-900 text-white text-xs font-bold px-3 py-1 rounded">Research</span>
+                        </div>
+                        <div class="p-6">
+                            <time class="text-xs text-slate-500">March 15, 2026</time>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-4 group-hover:text-indigo-900 transition-colors">Breakthrough in Discrete Geometry</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">
+                                Faculty members from the Department of Computer Science & Technology have published a pioneering study on combinatorial and discrete geometry algorithms.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- News Item 2 -->
+                    <article class="bg-white rounded overflow-hidden border border-slate-200 hover:shadow-xl transition-all group">
+                        <div class="h-56 overflow-hidden relative">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/rebeca.jpg');"></div>
+                            <span class="absolute top-4 left-4 bg-amber-400 text-slate-900 font-bold text-xs px-3 py-1 rounded">Campus Life</span>
+                        </div>
+                        <div class="p-6">
+                            <time class="text-xs text-slate-500">March 12, 2026</time>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-4 group-hover:text-indigo-900 transition-colors">Annual Rebecca Fest Returns</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">
+                                IIEST Shibpur's flagship cultural festival REBECA brings together students, alumni, and renowned artists for an iconic 4-day celebration of music and arts.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- News Item 3 -->
+                    <article class="bg-white rounded overflow-hidden border border-slate-200 hover:shadow-xl transition-all group">
+                        <div class="h-56 overflow-hidden relative">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/frontpage.jpeg');"></div>
+                            <span class="absolute top-4 left-4 bg-indigo-900 text-white text-xs font-bold px-3 py-1 rounded">Smart Grid</span>
+                        </div>
+                        <div class="p-6">
+                            <time class="text-xs text-slate-500">March 05, 2026</time>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-4 group-hover:text-indigo-900 transition-colors">Smart Microgrid Grant Awarded</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">
+                                Department of Electrical Engineering receives grant for research on solar PV-wind-biogas storage integrated smart hybrid microgrid systems.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-widget">
+                <h3>About IIEST Shibpur</h3>
+                <p style="margin-bottom: 15px; font-size: 0.9rem; line-height: 1.7;">
+                    Established in 1856, the Indian Institute of Engineering Science and Technology, Shibpur is one of India's oldest and most prestigious engineering institutions.
+                </p>
+                <p style="font-size: 0.85rem;"><i class="fa fa-map-marker-alt"></i> Botanical Garden Area, Howrah, West Bengal 711103</p>
+            </div>
+            
+            <div class="footer-widget">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="/">Home Page</a></li>
+                    <li><a href="/faculty/">Faculty Directory</a></li>
+                    <li><a href="/research/">Research Explorer</a></li>
+                    <li><a href="/login/">Faculty Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h3>External Resources</h3>
+                <ul>
+                    <li><a href="https://www.education.gov.in/" target="_blank">Ministry of Education</a></li>
+                    <li><a href="https://www.ugc.gov.in/" target="_blank">UGC India</a></li>
+                    <li><a href="https://www.aicte-india.org/" target="_blank">AICTE</a></li>
+                    <li><a href="https://www.inflibnet.ac.in/" target="_blank">INFLIBNET</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 IIEST Shibpur. Designed &amp; Developed for Academic &amp; College Projects. All Rights Reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty &amp; Admin Login - IIEST Shibpur</title>
+    <!-- Fonts & Icons -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+<div id="page" class="site">
+    <!-- Top info bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <span><i class="fa fa-envelope"></i> research@iiests.ac.in</span>
+                <span style="margin-left: 20px;"><i class="fa fa-phone"></i> +91 (033) 2668 4561</span>
+            </div>
+            <div class="top-bar-links">
+                <a href="/">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="/">
+                    <img src="/images/iiest-logo.jpg" alt="IIEST Shibpur Logo">
+                </a>
+            </div>
+            <div class="logo-text">
+                <h1>IIEST Shibpur</h1>
+                <p>Indian Institute of Engineering Science and Technology, Shibpur</p>
+            </div>
+            <nav class="nav-section">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/faculty/">Faculty</a></li>
+                    <li class="nav-item"><a href="/research/">Research</a></li>
+                    <li class="nav-item active"><a href="/login/" class="btn btn-accent"><i class="fa fa-sign-in-alt"></i> Login Portal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-20 bg-slate-100 flex items-center justify-center min-h-[70vh]">
+        <div class="w-full max-w-md bg-white border border-slate-200 rounded-xl p-8 shadow-lg">
+            <div class="text-center mb-8">
+                <img src="/images/iiest-logo.jpg" alt="IIEST Shibpur" class="w-16 h-16 mx-auto mb-4 object-contain">
+                <h1 class="text-2xl font-bold text-slate-900">Faculty Portal Login</h1>
+                <p class="text-sm text-slate-600">Access research publication management</p>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Demo Mode: Login disabled in static export.');">
+                <div class="mb-4">
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Username / Institutional Email</label>
+                    <input type="text" placeholder="e.g. asarkar@cs.iiests.ac.in" class="w-full px-4 py-3 border border-slate-300 rounded-lg outline-none focus:border-indigo-900 focus:ring-1 focus:ring-indigo-900" required>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Password</label>
+                    <input type="password" placeholder="••••••••" class="w-full px-4 py-3 border border-slate-300 rounded-lg outline-none focus:border-indigo-900 focus:ring-1 focus:ring-indigo-900" required>
+                </div>
+                <button type="submit" class="w-full bg-indigo-900 text-white font-bold py-3 rounded-lg hover:bg-indigo-800 transition-all">
+                    Sign In
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-widget">
+                <h3>About IIEST Shibpur</h3>
+                <p style="margin-bottom: 15px; font-size: 0.9rem; line-height: 1.7;">
+                    Established in 1856, the Indian Institute of Engineering Science and Technology, Shibpur is one of India's oldest and most prestigious engineering institutions.
+                </p>
+            </div>
+            
+            <div class="footer-widget">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="/">Home Page</a></li>
+                    <li><a href="/faculty/">Faculty Directory</a></li>
+                    <li><a href="/research/">Research Explorer</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h3>External Resources</h3>
+                <ul>
+                    <li><a href="https://www.education.gov.in/" target="_blank">Ministry of Education</a></li>
+                    <li><a href="https://www.ugc.gov.in/" target="_blank">UGC India</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 IIEST Shibpur. All Rights Reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
