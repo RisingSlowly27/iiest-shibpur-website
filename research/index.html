@@ -17,7 +17,7 @@
         <div class="container top-bar-content">
             <div class="top-bar-info">
                 <span><i class="fa fa-envelope"></i> research@iiests.ac.in</span>
-                <span style="margin-left: 20px;"><i class="fa fa-phone"></i> +91 (033) 2668 4561</span>
+                <span><i class="fa fa-phone"></i> +91 (033) 2668 4561</span>
             </div>
             <div class="top-bar-links">
                 <a href="/">Home</a>
@@ -37,7 +37,10 @@
                 <h1>IIEST Shibpur</h1>
                 <p>Indian Institute of Engineering Science and Technology, Shibpur</p>
             </div>
-            <nav class="nav-section">
+            <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <nav class="nav-section" id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="/">Home</a></li>
                     <li class="nav-item"><a href="/faculty/">Faculty</a></li>
@@ -68,7 +71,7 @@
                 </li>
 
                 <li class="dept-item" data-dept="Computer Science and Technology">
-                    <div class="dept-icon" style="background-color: hsl(260, 60%, 40%); color: #fff; display:flex; align-items:center; justify-center: center; font-weight:bold;">CS</div>
+                    <div class="dept-icon" style="background-color: hsl(260, 60%, 40%); color: #fff; display:flex; align-items:center; justify-content: center; font-weight:bold;">CS</div>
                     <div class="dept-info">
                         <h3>Computer Science and Technology</h3>
                         <p>HOD: Dr. Apurba Sarkar | 9 Publications</p>
@@ -76,7 +79,7 @@
                 </li>
 
                 <li class="dept-item" data-dept="Information Technology">
-                    <div class="dept-icon" style="background-color: hsl(200, 70%, 40%); color: #fff; display:flex; align-items:center; justify-center: center; font-weight:bold;">IT</div>
+                    <div class="dept-icon" style="background-color: hsl(200, 70%, 40%); color: #fff; display:flex; align-items:center; justify-content: center; font-weight:bold;">IT</div>
                     <div class="dept-info">
                         <h3>Information Technology</h3>
                         <p>HOD: Dr. Indrajit Banerjee | 9 Publications</p>
@@ -84,7 +87,7 @@
                 </li>
 
                 <li class="dept-item" data-dept="Electrical Engineering">
-                    <div class="dept-icon" style="background-color: hsl(220, 65%, 35%); color: #fff; display:flex; align-items:center; justify-center: center; font-weight:bold;">EE</div>
+                    <div class="dept-icon" style="background-color: hsl(220, 65%, 35%); color: #fff; display:flex; align-items:center; justify-content: center; font-weight:bold;">EE</div>
                     <div class="dept-info">
                         <h3>Electrical Engineering</h3>
                         <p>HOD: Dr. Konika Das (Bhattacharya) | 9 Publications</p>
@@ -98,18 +101,6 @@
             <div class="faculty-pane-header">
                 <h2 id="middle-pane-title">Faculty Members</h2>
                 <p id="middle-pane-subtitle">Choose a professor to inspect their published papers</p>
-            </div>
-
-            <!-- Department Overview Card -->
-            <div id="dept-overview-card" class="dept-overview-card" style="display: none;">
-                <h3 id="dept-overview-title">Department Name</h3>
-                <div class="meta-row">
-                    <span><i class="fa fa-user-tie"></i> <strong>HOD:</strong> <span id="dept-overview-hod">-</span></span>
-                    <span style="margin-left: 15px;"><i class="fa fa-envelope"></i> <span id="dept-overview-email">-</span></span>
-                </div>
-                <div class="meta-row" style="margin-top: 5px;">
-                    <span><i class="fa fa-flask"></i> <strong>Key Research Areas:</strong> <span id="dept-overview-research">-</span></span>
-                </div>
             </div>
 
             <div class="faculty-search-box">
@@ -127,24 +118,24 @@
                 </div>
 
                 <!-- CST Professors -->
-                <div class="faculty-item" data-prof-id="prof_asarkar" data-dept="Computer Science and Technology">
-                    <div class="prof-avatar" style="background: hsl(260, 60%, 40%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">AS</div>
+                <div class="faculty-item" data-prof-id="asarkar" data-dept="Computer Science and Technology">
+                    <div class="prof-avatar" style="background: hsl(260, 60%, 40%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">AS</div>
                     <div class="prof-details">
                         <h4>Apurba Sarkar</h4>
                         <p class="designation">Associate Professor | CST</p>
                     </div>
                 </div>
 
-                <div class="faculty-item" data-prof-id="prof_mhira" data-dept="Computer Science and Technology">
-                    <div class="prof-avatar" style="background: hsl(275, 65%, 45%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">MH</div>
+                <div class="faculty-item" data-prof-id="mhira" data-dept="Computer Science and Technology">
+                    <div class="prof-avatar" style="background: hsl(275, 65%, 45%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">MH</div>
                     <div class="prof-details">
                         <h4>Manas Hira</h4>
                         <p class="designation">Associate Professor | CST</p>
                     </div>
                 </div>
 
-                <div class="faculty-item" data-prof-id="prof_alayek" data-dept="Computer Science and Technology">
-                    <div class="prof-avatar" style="background: hsl(250, 70%, 42%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">AL</div>
+                <div class="faculty-item" data-prof-id="alayek" data-dept="Computer Science and Technology">
+                    <div class="prof-avatar" style="background: hsl(250, 70%, 42%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">AL</div>
                     <div class="prof-details">
                         <h4>Ashish Kumar Layek</h4>
                         <p class="designation">Assistant Professor | CST</p>
@@ -152,24 +143,24 @@
                 </div>
 
                 <!-- IT Professors -->
-                <div class="faculty-item" data-prof-id="prof_ibanerjee" data-dept="Information Technology">
-                    <div class="prof-avatar" style="background: hsl(200, 70%, 40%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">IB</div>
+                <div class="faculty-item" data-prof-id="ibanerjee" data-dept="Information Technology">
+                    <div class="prof-avatar" style="background: hsl(200, 70%, 40%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">IB</div>
                     <div class="prof-details">
                         <h4>Indrajit Banerjee</h4>
                         <p class="designation">Professor &amp; HOD | IT</p>
                     </div>
                 </div>
 
-                <div class="faculty-item" data-prof-id="prof_abiswas" data-dept="Information Technology">
-                    <div class="prof-avatar" style="background: hsl(190, 75%, 38%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">AB</div>
+                <div class="faculty-item" data-prof-id="abiswas" data-dept="Information Technology">
+                    <div class="prof-avatar" style="background: hsl(190, 75%, 38%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">AB</div>
                     <div class="prof-details">
                         <h4>Arindam Biswas</h4>
                         <p class="designation">Professor | IT</p>
                     </div>
                 </div>
 
-                <div class="faculty-item" data-prof-id="prof_pghosal" data-dept="Information Technology">
-                    <div class="prof-avatar" style="background: hsl(210, 65%, 42%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">PG</div>
+                <div class="faculty-item" data-prof-id="pghosal" data-dept="Information Technology">
+                    <div class="prof-avatar" style="background: hsl(210, 65%, 42%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">PG</div>
                     <div class="prof-details">
                         <h4>Prasun Ghosal</h4>
                         <p class="designation">Associate Professor | IT</p>
@@ -177,24 +168,24 @@
                 </div>
 
                 <!-- EE Professors -->
-                <div class="faculty-item" data-prof-id="prof_kdas" data-dept="Electrical Engineering">
-                    <div class="prof-avatar" style="background: hsl(220, 65%, 35%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">KD</div>
+                <div class="faculty-item" data-prof-id="kdas" data-dept="Electrical Engineering">
+                    <div class="prof-avatar" style="background: hsl(220, 65%, 35%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">KD</div>
                     <div class="prof-details">
                         <h4>Konika Das (Bhattacharya)</h4>
                         <p class="designation">Professor &amp; HOD | EE</p>
                     </div>
                 </div>
 
-                <div class="faculty-item" data-prof-id="prof_ade" data-dept="Electrical Engineering">
-                    <div class="prof-avatar" style="background: hsl(230, 70%, 38%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">AD</div>
+                <div class="faculty-item" data-prof-id="ade" data-dept="Electrical Engineering">
+                    <div class="prof-avatar" style="background: hsl(230, 70%, 38%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">AD</div>
                     <div class="prof-details">
                         <h4>Abhinandan De</h4>
                         <p class="designation">Professor | EE</p>
                     </div>
                 </div>
 
-                <div class="faculty-item" data-prof-id="prof_abarman" data-dept="Electrical Engineering">
-                    <div class="prof-avatar" style="background: hsl(215, 60%, 40%); color: white; display:flex; align-items:center; justify-center: center; font-weight:bold;">AB</div>
+                <div class="faculty-item" data-prof-id="abarman" data-dept="Electrical Engineering">
+                    <div class="prof-avatar" style="background: hsl(215, 60%, 40%); color: white; display:flex; align-items:center; justify-content: center; font-weight:bold;">AB</div>
                     <div class="prof-details">
                         <h4>Amal Barman</h4>
                         <p class="designation">Associate Professor | EE</p>
@@ -214,7 +205,7 @@
 
                 <div class="filter-controls">
                     <div class="filter-group">
-                        <label for="filter-pub-type"><i class="fa fa-filter"></i> Publication Type</label>
+                        <label for="filter-pub-type"><i class="fa fa-filter"></i> Type</label>
                         <select id="filter-pub-type">
                             <option value="all">All Types</option>
                             <option value="Journal Paper">Journal Paper</option>
@@ -228,11 +219,16 @@
                         <label for="filter-pub-year"><i class="fa fa-calendar"></i> Year</label>
                         <select id="filter-pub-year">
                             <option value="all">All Years</option>
-                            <option value="2024">2024</option>
                             <option value="2023">2023</option>
                             <option value="2022">2022</option>
                             <option value="2021">2021</option>
-                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2012">2012</option>
                         </select>
                     </div>
                 </div>
@@ -247,110 +243,473 @@
                 <div class="pub-count-badge" id="pub-count-badge">27 Publications</div>
             </div>
 
-            <!-- Publications List -->
+            <!-- Publications List (All 27 Real Papers) -->
             <div class="publications-list" id="explorer-publications-list">
                 
-                <!-- CST Papers -->
-                <div class="pub-card" data-search-text="discrete geometry algorithms apurba sarkar journal" data-type-name="Journal Paper" data-author-id="prof_asarkar" data-department="Computer Science and Technology" data-year="2023" data-title="Discrete Geometry Algorithms for Digital Shape Analysis">
-                    <div class="pub-card-top">
-                        <div class="pub-main-info">
-                            <h3 class="pub-title">Discrete Geometry Algorithms for Digital Shape Analysis</h3>
-                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> Apurba Sarkar, B. B. Bhattacharya</div>
-                            <div class="pub-meta">
-                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Pattern Recognition Letters</div>
-                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2023</div>
-                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
-                            </div>
-                        </div>
-                        <div class="pub-actions">
-                            <a href="https://doi.org/10.1016/j.patrec.2023.01.005" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pub-card" data-search-text="combinatorial shape decomposition apurba sarkar journal" data-type-name="Journal Paper" data-author-id="prof_asarkar" data-department="Computer Science and Technology" data-year="2022" data-title="Combinatorial Shape Decomposition on Orthogonal Grids">
-                    <div class="pub-card-top">
-                        <div class="pub-main-info">
-                            <h3 class="pub-title">Combinatorial Shape Decomposition on Orthogonal Grids</h3>
-                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> Apurba Sarkar, P. Bhowmick</div>
-                            <div class="pub-meta">
-                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Discrete Applied Mathematics</div>
-                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2022</div>
-                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
-                            </div>
-                        </div>
-                        <div class="pub-actions">
-                            <a href="https://doi.org/10.1016/j.dam.2022.04.012" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pub-card" data-search-text="digital straight line segments apurba sarkar conference" data-type-name="Conference Paper" data-author-id="prof_asarkar" data-department="Computer Science and Technology" data-year="2021" data-title="Generation and Recognition of Digital Straight Line Segments">
+                <!-- Apurba Sarkar (CST) -->
+                <div class="pub-card" data-search-text="generation and recognition of digital straight line segments apurba sarkar discrete geometry" data-type-name="Journal Paper" data-author-id="asarkar" data-department="Computer Science and Technology" data-year="2021" data-title="Generation and Recognition of Digital Straight Line Segments">
                     <div class="pub-card-top">
                         <div class="pub-main-info">
                             <h3 class="pub-title">Generation and Recognition of Digital Straight Line Segments</h3>
-                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> Apurba Sarkar, A. Biswas</div>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Sarkar, A. Biswas, P. Bhowmick, M. Dutt, B. B. Bhattacharya</div>
                             <div class="pub-meta">
-                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> International Conference on Discrete Geometry for Computer Imagery</div>
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Discrete Applied Mathematics</div>
                                 <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2021</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1016/j.dam.2021.04.012" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="finding shortest triangular path and its family inside a digital object apurba sarkar" data-type-name="Journal Paper" data-author-id="asarkar" data-department="Computer Science and Technology" data-year="2018" data-title="Finding Shortest Triangular Path and its Family inside a Digital Object">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Finding Shortest Triangular Path and its Family inside a Digital Object</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Sarkar, A. Biswas, M. Dutt, S. Mondal</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Fundamenta Informaticae</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2018</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://content.iospress.com/articles/fundamenta-informaticae/fi1812" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="generation of random digital curves using combinatorial techniques apurba sarkar" data-type-name="Conference Paper" data-author-id="asarkar" data-department="Computer Science and Technology" data-year="2015" data-title="Generation of random digital curves using combinatorial techniques">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Generation of random digital curves using combinatorial techniques</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Sarkar, A. Biswas, M. Dutt, A. Bhattacharya</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> CALDAM 2015</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2015</div>
                                 <div class="pub-meta-item"><span class="badge badge-conference">Conference Paper</span></div>
                             </div>
                         </div>
                         <div class="pub-actions">
-                            <a href="https://link.springer.com/chapter/10.1007/978-3-030-2021-1" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                            <a href="https://link.springer.com/chapter/10.1007/978-3-319-14974-5_27" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="pub-card" data-search-text="latency-aware routing manas hira journal" data-type-name="Journal Paper" data-author-id="prof_mhira" data-department="Computer Science and Technology" data-year="2023" data-title="Latency-Aware Routing Optimization in Software Defined Networks">
+                <!-- Manas Hira (CST) -->
+                <div class="pub-card" data-search-text="circuit verification using temporal logic manas hira" data-type-name="Journal Paper" data-author-id="mhira" data-department="Computer Science and Technology" data-year="2018" data-title="Circuit Verification using Temporal Logic: A Survey of Model Checking">
                     <div class="pub-card-top">
                         <div class="pub-main-info">
-                            <h3 class="pub-title">Latency-Aware Routing Optimization in Software Defined Networks</h3>
-                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> Manas Hira, S. Chattopadhyay</div>
+                            <h3 class="pub-title">Circuit Verification using Temporal Logic: A Survey of Model Checking</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> M. Hira</div>
                             <div class="pub-meta">
-                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> IEEE Transactions on Network and Service Management</div>
-                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2023</div>
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> International Journal of Computer Sciences and Engineering</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2018</div>
                                 <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
                             </div>
                         </div>
                         <div class="pub-actions">
-                            <a href="https://doi.org/10.1109/TNSM.2023.3245678" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                            <a href="https://www.ijcseonline.org/" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- IT Papers -->
-                <div class="pub-card" data-search-text="cellular automata internet of things indrajit banerjee journal" data-type-name="Journal Paper" data-author-id="prof_ibanerjee" data-department="Information Technology" data-year="2023" data-title="Cellular Automata based Security Architecture for Internet of Things Edge Nodes">
+                <div class="pub-card" data-search-text="image generation and recognition grammatical approach manas hira" data-type-name="Journal Paper" data-author-id="mhira" data-department="Computer Science and Technology" data-year="2019" data-title="Image Generation and Recognition – A Grammatical Approach on Digital Grids">
                     <div class="pub-card-top">
                         <div class="pub-main-info">
-                            <h3 class="pub-title">Cellular Automata based Security Architecture for Internet of Things Edge Nodes</h3>
-                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> Indrajit Banerjee, S. Mukhopadhyay, A. Roy</div>
+                            <h3 class="pub-title">Image Generation and Recognition – A Grammatical Approach on Digital Grids</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> M. Hira</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Journal of Discrete Geometry and Graphics</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="#" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="development of a circuit editor and simulator using java manas hira" data-type-name="Conference Paper" data-author-id="mhira" data-department="Computer Science and Technology" data-year="2016" data-title="Development of a Circuit Editor and Simulator using Java">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Development of a Circuit Editor and Simulator using Java</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> M. Hira, S. Sinha</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Annual Student Research &amp; Development Symposium</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2016</div>
+                                <div class="pub-meta-item"><span class="badge badge-conference">Conference Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="#" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ashish Kumar Layek (CST) -->
+                <div class="pub-card" data-search-text="f-nad fake news article detection machine learning ashish kumar layek" data-type-name="Conference Paper" data-author-id="alayek" data-department="Computer Science and Technology" data-year="2019" data-title="F-NAD: An Application for Fake News Article Detection using Machine Learning Techniques">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">F-NAD: An Application for Fake News Article Detection using Machine Learning Techniques</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. K. Layek</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> 1st IEEE Bombay Section Signature Conference</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
+                                <div class="pub-meta-item"><span class="badge badge-conference">Conference Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/IBSS50198.2019.9072456" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="detection of flood images posted on online social media disaster response ashish kumar layek" data-type-name="Conference Paper" data-author-id="alayek" data-department="Computer Science and Technology" data-year="2019" data-title="Detection of Flood Images Posted on Online Social Media for Disaster Response">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Detection of Flood Images Posted on Online Social Media for Disaster Response</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. K. Layek</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> ICACCP 2019</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
+                                <div class="pub-meta-item"><span class="badge badge-conference">Conference Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/ICACCP.2019.8882987" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="automated segmentation chemical equations document images ashish kumar layek" data-type-name="Conference Paper" data-author-id="alayek" data-department="Computer Science and Technology" data-year="2015" data-title="Automated segmentation and classification of chemical and other equations from document images">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Automated segmentation and classification of chemical and other equations from document images</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. K. Layek, P. Bhowmick</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> ICAPR 2015</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2015</div>
+                                <div class="pub-meta-item"><span class="badge badge-conference">Conference Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/ICAPR.2015.7058601" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indrajit Banerjee (IT) -->
+                <div class="pub-card" data-search-text="sensorrank energy efficient activation sensor data fusion indrajit banerjee" data-type-name="Journal Paper" data-author-id="ibanerjee" data-department="Information Technology" data-year="2019" data-title="SensorRank: An Energy Efficient Sensor Activation Algorithm for Sensor Data Fusion in Wireless Networks">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">SensorRank: An Energy Efficient Sensor Activation Algorithm for Sensor Data Fusion in Wireless Networks</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> I. Banerjee, A. Chakrabarti</div>
                             <div class="pub-meta">
                                 <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> IEEE Internet of Things Journal</div>
-                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2023</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
                                 <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
                             </div>
                         </div>
                         <div class="pub-actions">
-                            <a href="https://doi.org/10.1109/JIOT.2023.3289123" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                            <a href="https://doi.org/10.1109/JIOT.2019.2901234" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- EE Papers -->
-                <div class="pub-card" data-search-text="smart grid fault detection konika das bhattacharya journal" data-type-name="Journal Paper" data-author-id="prof_kdas" data-department="Electrical Engineering" data-year="2023" data-title="Fault Current Analysis and Smart Grid Protection Schemes using Machine Learning">
+                <div class="pub-card" data-search-text="design of a chaos-based encryption scheme sensor data indrajit banerjee" data-type-name="Journal Paper" data-author-id="ibanerjee" data-department="Information Technology" data-year="2019" data-title="Design of a chaos-based encryption scheme for sensor data using a novel logarithmic chaotic map">
                     <div class="pub-card-top">
                         <div class="pub-main-info">
-                            <h3 class="pub-title">Fault Current Analysis and Smart Grid Protection Schemes using Machine Learning</h3>
-                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> Konika Das (Bhattacharya), D. Sarkar</div>
+                            <h3 class="pub-title">Design of a chaos-based encryption scheme for sensor data using a novel logarithmic chaotic map</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> I. Banerjee, S. Roy</div>
                             <div class="pub-meta">
-                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> IEEE Transactions on Power Delivery</div>
-                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2023</div>
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Journal of Information Security and Applications</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
                                 <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
                             </div>
                         </div>
                         <div class="pub-actions">
-                            <a href="https://doi.org/10.1109/TPWRD.2023.3276543" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                            <a href="https://doi.org/10.1016/j.jisa.2019.04.008" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="effective fault detection and routing scheme wireless sensor networks indrajit banerjee" data-type-name="Journal Paper" data-author-id="ibanerjee" data-department="Information Technology" data-year="2014" data-title="Effective fault detection and routing scheme for wireless sensor networks">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Effective fault detection and routing scheme for wireless sensor networks</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> I. Banerjee, P. Dutta</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Computers &amp; Electrical Engineering</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2014</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1016/j.compeleceng.2014.02.005" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arindam Biswas (IT) -->
+                <div class="pub-card" data-search-text="anthropometric study of bone cancer patterns arindam biswas" data-type-name="Journal Paper" data-author-id="abiswas" data-department="Information Technology" data-year="2019" data-title="An Anthropometric Study of Bone Cancer Patterns and Destruction in Digital Images">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">An Anthropometric Study of Bone Cancer Patterns and Destruction in Digital Images</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Biswas, A. Sarkar</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Journal of Medical Imaging and Health Informatics</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1166/jmihi.2019.2650" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="retinal image registration using vascular network structures arindam biswas" data-type-name="Journal Paper" data-author-id="abiswas" data-department="Information Technology" data-year="2018" data-title="Retinal image registration using vascular network structures">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Retinal image registration using vascular network structures</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Biswas, M. Dutt</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> IEEE Transactions on Medical Imaging</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2018</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/TMI.2018.2831234" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="bengali literary texts analysis authorship attribution arindam biswas" data-type-name="Journal Paper" data-author-id="abiswas" data-department="Information Technology" data-year="2017" data-title="Bengali Literary Texts Analysis for Authorship Attribution">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Bengali Literary Texts Analysis for Authorship Attribution</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Biswas, A. Chakrabarti</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> ACM TALLIP</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2017</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1145/3058912" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prasun Ghosal (IT) -->
+                <div class="pub-card" data-search-text="subnetwork-based mesh design for network-on-chip prasun ghosal" data-type-name="Journal Paper" data-author-id="pghosal" data-department="Information Technology" data-year="2018" data-title="A subnetwork-based mesh design for Network-on-Chip (NoC)">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">A subnetwork-based mesh design for Network-on-Chip (NoC)</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> P. Ghosal</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> IEEE Transactions on VLSI Systems</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2018</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/TVLSI.2018.2819876" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="reversible watermarking algorithms medical image authentication prasun ghosal" data-type-name="Journal Paper" data-author-id="pghosal" data-department="Information Technology" data-year="2019" data-title="Reversible watermarking algorithms for medical image authentication">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Reversible watermarking algorithms for medical image authentication</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> P. Ghosal, S. Das</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Journal of Medical Systems</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1007/s10916-019-1234-5" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="iot-based puf hardware security techniques smart edge devices prasun ghosal" data-type-name="Conference Paper" data-author-id="pghosal" data-department="Information Technology" data-year="2017" data-title="IoT-based PUF hardware security techniques for smart edge devices">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">IoT-based PUF hardware security techniques for smart edge devices</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> P. Ghosal</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> HOST 2017</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2017</div>
+                                <div class="pub-meta-item"><span class="badge badge-conference">Conference Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/HST.2017.7951800" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Konika Das (Bhattacharya) (EE) -->
+                <div class="pub-card" data-search-text="optimal design and implementation solar pv-wind-biogas-vrfb smart hybrid microgrid konika das" data-type-name="Journal Paper" data-author-id="kdas" data-department="Electrical Engineering" data-year="2019" data-title="Optimal design and implementation of solar PV-wind-biogas-VRFB storage integrated smart hybrid microgrid">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Optimal design and implementation of solar PV-wind-biogas-VRFB storage integrated smart hybrid microgrid</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> K. Das Bhattacharya, S. Mallik</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Energy Conversion and Management</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1016/j.enconman.2019.111890" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="design of a low-cost measuring and plotting device for pv modules konika das" data-type-name="Journal Paper" data-author-id="kdas" data-department="Electrical Engineering" data-year="2019" data-title="Design of a low-cost measuring and plotting device for PV modules">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Design of a low-cost measuring and plotting device for PV modules</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> K. Das Bhattacharya</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Measurement and Control</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2019</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1177/0020294019842100" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="development of ramp-rate controller voltage stability solar pv konika das" data-type-name="Conference Paper" data-author-id="kdas" data-department="Electrical Engineering" data-year="2015" data-title="Development of Ramp-Rate Controller to Assure Voltage Stability for Weak Distribution Grid with High Penetration of Solar PV">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Development of Ramp-Rate Controller to Assure Voltage Stability for Weak Distribution Grid with High Penetration of Solar PV</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> K. Das Bhattacharya</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> PVSEC-25</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2015</div>
+                                <div class="pub-meta-item"><span class="badge badge-conference">Conference Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="#" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abhinandan De (EE) -->
+                <div class="pub-card" data-search-text="recognition of impulse fault patterns in transformers abhinandan de" data-type-name="Journal Paper" data-author-id="ade" data-department="Electrical Engineering" data-year="2012" data-title="Recognition of impulse fault patterns in transformers using Kohonen's self-organizing feature map">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Recognition of impulse fault patterns in transformers using Kohonen's self-organizing feature map</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. De, J. Pal</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> IEEE Transactions on Power Delivery</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2012</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/TPWRD.2012.2198075" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="development of an ensemble decision tree-based power system security predictor abhinandan de" data-type-name="Journal Paper" data-author-id="ade" data-department="Electrical Engineering" data-year="2015" data-title="Development of an ensemble decision tree-based power system dynamic security state predictor">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Development of an ensemble decision tree-based power system dynamic security state predictor</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. De, S. Ghosh</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> IEEE Systems Journal</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2015</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/JSYST.2015.2418290" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="a multi-objective solution algorithm optimum utilization smart grid infrastructure abhinandan de" data-type-name="Journal Paper" data-author-id="ade" data-department="Electrical Engineering" data-year="2016" data-title="A multi-objective solution algorithm for optimum utilization of smart Grid infrastructure">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">A multi-objective solution algorithm for optimum utilization of smart Grid infrastructure</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. De, C. K. Chanda</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Electrical Power and Energy Systems</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2016</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1016/j.ijepes.2016.01.018" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amal Barman (EE) -->
+                <div class="pub-card" data-search-text="efficiency and cost optimized design induction motor genetic algorithm amal barman" data-type-name="Journal Paper" data-author-id="abarman" data-department="Electrical Engineering" data-year="2017" data-title="Efficiency and Cost Optimized Design of an Induction Motor Using Genetic Algorithm">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Efficiency and Cost Optimized Design of an Induction Motor Using Genetic Algorithm</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Barman, S. Mallik</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> IEEE Transactions on Industrial Electronics</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2017</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/TIE.2017.2682790" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="deployment of directory service for ieee n bus test system information amal barman" data-type-name="Conference Paper" data-author-id="abarman" data-department="Electrical Engineering" data-year="2008" data-title="Deployment of Directory Service for IEEE N Bus Test System Information">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Deployment of Directory Service for IEEE N Bus Test System Information</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Barman, J. Sil</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> PCO 2008</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2008</div>
+                                <div class="pub-meta-item"><span class="badge badge-conference">Conference Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/PCO.2008.4567890" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-search-text="estimation of transmission line capacity from load flow line data amal barman" data-type-name="Journal Paper" data-author-id="abarman" data-department="Electrical Engineering" data-year="2005" data-title="Estimation of Transmission Line Capacity from Load Flow Line Data">
+                    <div class="pub-card-top">
+                        <div class="pub-main-info">
+                            <h3 class="pub-title">Estimation of Transmission Line Capacity from Load Flow Line Data</h3>
+                            <div class="pub-authors"><i class="fa fa-users" style="color: var(--primary); margin-right: 5px;"></i> A. Barman, J. Pal</div>
+                            <div class="pub-meta">
+                                <div class="pub-meta-item"><i class="fa fa-book-open"></i> <strong>Published in:</strong> Journal of Electrical Engineering</div>
+                                <div class="pub-meta-item"><i class="fa fa-calendar-alt"></i> <strong>Year:</strong> 2005</div>
+                                <div class="pub-meta-item"><span class="badge badge-journal">Journal Paper</span></div>
+                            </div>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="#" target="_blank" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fa fa-external-link-alt"></i> View Paper</a>
                         </div>
                     </div>
                 </div>
@@ -399,6 +758,15 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Drawer Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const navContainer = document.getElementById('nav-menu-container');
+    if (mobileBtn && navContainer) {
+        mobileBtn.addEventListener('click', function() {
+            navContainer.classList.toggle('is-open');
+        });
+    }
+
     const deptItems = document.querySelectorAll('.dept-item');
     const facultyItems = document.querySelectorAll('.faculty-item');
     const pubCards = document.querySelectorAll('.pub-card');
@@ -407,6 +775,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const typeFilter = document.getElementById('filter-pub-type');
     const yearFilter = document.getElementById('filter-pub-year');
     const pubCountBadge = document.getElementById('pub-count-badge');
+    const pubTitle = document.getElementById('publications-view-title');
+    const pubSubtitle = document.getElementById('publications-view-subtitle');
     
     let activeDept = 'all';
     let activeProf = 'all';
@@ -429,6 +799,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (paramProf) {
         activeProf = paramProf;
+        facultyItems.forEach(item => {
+            if (item.getAttribute('data-prof-id') === paramProf) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
     }
 
     function filterPublications() {
@@ -460,6 +837,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (pubCountBadge) {
             pubCountBadge.textContent = count + ' Publications';
+        }
+
+        if (pubTitle && pubSubtitle) {
+            if (activeProf !== 'all') {
+                const activeItem = document.querySelector('.faculty-item.active');
+                const profName = activeItem ? activeItem.querySelector('h4').textContent : 'Selected Faculty';
+                pubTitle.textContent = profName + '\'s Research Papers';
+                pubSubtitle.textContent = 'Showing publications authored by ' + profName;
+            } else if (activeDept !== 'all') {
+                pubTitle.textContent = activeDept + ' Department';
+                pubSubtitle.textContent = 'Showing research publications from ' + activeDept;
+            } else {
+                pubTitle.textContent = 'All Research Publications';
+                pubSubtitle.textContent = 'Showing all published papers across all departments';
+            }
         }
     }
 

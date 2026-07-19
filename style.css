@@ -1587,3 +1587,108 @@ section {
         align-items: stretch;
     }
 }
+
+/* --- Mobile Responsiveness Enhancements --- */
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--primary-dark);
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.mobile-menu-toggle:hover {
+    background-color: var(--border-light);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        justify-content: space-between;
+    }
+
+    .nav-section {
+        width: 100%;
+        display: none;
+        margin-top: 12px;
+    }
+
+    .nav-section.is-open {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        background: var(--card-bg);
+        padding: 16px;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+        width: 100%;
+    }
+
+    .nav-item a {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+        text-align: left;
+    }
+
+    .top-bar-content {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+
+    .top-bar-info span {
+        display: inline-block;
+        margin-left: 0 !important;
+        margin-right: 10px;
+        font-size: 0.8rem;
+    }
+
+    .explorer-wrapper {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    .sidebar-pane,
+    .middle-pane,
+    .main-content-pane {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .pub-card-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pub-actions {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+
+    .pub-actions a,
+    .pub-actions button {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+    }
+}
