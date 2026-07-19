@@ -1661,15 +1661,15 @@ section {
         font-size: 0.8rem;
     }
 
-    .explorer-wrapper {
+    .explore-grid {
+        display: flex;
         flex-direction: column;
-        padding: 15px 10px;
         gap: 20px;
     }
 
-    .sidebar-pane,
-    .middle-pane,
-    .main-content-pane {
+    .left-pane,
+    .center-pane,
+    .right-pane {
         width: 100%;
         max-width: 100%;
     }
